@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void deleteAfter(char* fBuffer) //функция для удаления текста после первой точки
+void deleteAfter(char* fBuffer) //С„СѓРЅРєС†РёСЏ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ С‚РµРєСЃС‚Р° РїРѕСЃР»Рµ РїРµСЂРІРѕР№ С‚РѕС‡РєРё
 {
 	int index, i = 0;
 	bool found = false;
@@ -24,9 +24,9 @@ void deleteAfter(char* fBuffer) //функция для удаления текста после первой точки
 		i++;
 	}
 
-	if (!found)							//если точки нет, выходим из функции
+	if (!found)					//РµСЃР»Рё С‚РѕС‡РєРё РЅРµС‚, РІС‹С…РѕРґРёРј РёР· С„СѓРЅРєС†РёРё
 		return;
-	fBuffer[index + 1] = '\n';			//стираем после точки
+	fBuffer[index + 1] = '\n';			//СЃС‚РёСЂР°РµРј РїРѕСЃР»Рµ С‚РѕС‡РєРё
 	fBuffer[index + 2] = '\0';
 	return;
 }
@@ -49,8 +49,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	while (fgets(buffer, 256, inFile) != NULL)
 	{
-		deleteAfter(buffer);							//вызываем функцию
-		fputs(buffer, outFile);							//записываем полученую строку в файл
+		deleteAfter(buffer);							//РІС‹Р·С‹РІР°РµРј С„СѓРЅРєС†РёСЋ
+		fputs(buffer, outFile);							//Р·Р°РїРёСЃС‹РІР°РµРј РїРѕР»СѓС‡РµРЅСѓСЋ СЃС‚СЂРѕРєСѓ РІ С„Р°Р№Р»
 	}
 
 	fclose(inFile);
